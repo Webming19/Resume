@@ -175,8 +175,8 @@ export const skills: SkillGroup[] = [
 // 项目部分
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: '项目标题 1',
-    description: '在这里给出你的项目的简短描述。',
+    title: '全系感知系统',
+    description: '提供数据统计、视频浏览等。',
     url: '',
     image: porfolioImage1,
   },
