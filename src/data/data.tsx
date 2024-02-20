@@ -176,7 +176,7 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: '全系感知系统',
-    description: '提供数据统计、视频浏览等。',
+    description: '提供数据统计、视频浏览等功能',
     url: '',
     image: porfolioImage1,
   },
