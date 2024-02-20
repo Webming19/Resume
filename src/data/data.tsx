@@ -47,8 +47,8 @@ export const SectionId = {
   Testimonials: 'testimonials',
 } as const;
 export const SectionIdName = {
-  Hero: '顶部',
-  About: '关于',
+  Hero: 'Hero部分',
+  About: '关于我',
   Contact: '联系方式',
   Portfolio: '参与项目',
   Resume: '个人简历',
@@ -91,7 +91,7 @@ export const heroData: Hero = {
 // 个人介绍
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: '一名前端开发人员，负责组内项目工程化、组件编写工作。',
+  description: '一名前端开发人员，负责组内项目工程化和组件编写工作。',
   aboutItems: [
     {label: '位置', text: '山东 / 青岛', Icon: MapIcon},
     {label: '年龄', text: '1997/01', Icon: CalendarIcon},
@@ -177,7 +177,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: '项目标题 1',
     description: '在这里给出你的项目的简短描述。',
-    url: 'https://reactresume.com',
+    url: '',
     image: porfolioImage1,
   },
 ];
@@ -190,7 +190,7 @@ export const education: TimelineItem[] = [
     content: <p>计算机二级、计算机三级</p>,
   },
 ];
-// 工作经理
+// 工作经历
 export const experience: TimelineItem[] = [
   {
     date: '2019/07-2021/10',
@@ -205,16 +205,17 @@ export const experience: TimelineItem[] = [
     content: (<p>前端脚手架构建和维护、规范制定、编写高可用组件、参与项目开发。</p>),
   },
 ];
-// 推荐部分
+// TA人评价
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: '约翰·多伊',
-      text: '利用这个机会来推广与你合作的感觉。高价值的推荐包括来自当前或过去的同事、经理或满意的客户的推荐。',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: '武子康',
+      text: '基于DevOps的合作非常愉快。',
+      image: '/images/testimonial/169.jpg',
     },
-  ]};
+  ],
+};
 
 // 联系方式
 export const contact: ContactSection = {
@@ -243,7 +244,7 @@ export const contact: ContactSection = {
     },
   ],
 };
-// 联系方式项目
+// 社交链接
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Webming19'},
   {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/21751650/ethan-han'},

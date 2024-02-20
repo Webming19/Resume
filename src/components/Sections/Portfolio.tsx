@@ -13,7 +13,7 @@ const Portfolio: FC = memo(() => {
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
-        <h2 className="self-center text-xl font-bold text-white">Check out some of my work</h2>
+        <h2 className="self-center text-xl font-bold text-white">参与项目</h2>
         <div className=" w-full columns-2 md:columns-3 lg:columns-4">
           {portfolioItems.map((item, index) => {
             const {title, image} = item;
@@ -62,23 +62,43 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
   );
 
   return (
-    <a
-      className={classNames(
-        'absolute inset-0 h-full w-full  bg-gray-900 transition-all duration-300',
-        {'opacity-0 hover:opacity-80': !mobile},
-        showOverlay ? 'opacity-80' : 'opacity-0',
-      )}
-      href={url}
-      onClick={handleItemClick}
-      ref={linkRef}
-      target="_blank">
-      <div className="relative h-full w-full p-4">
-        <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
-          <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
-          <p className="text-xs text-white opacity-100 sm:text-sm">{description}</p>
+    <>
+      {url ?
+        <a
+          className={classNames(
+            'absolute inset-0 h-full w-full  bg-gray-900 transition-all duration-300',
+            {'opacity-0 hover:opacity-80': !mobile},
+            showOverlay ? 'opacity-80' : 'opacity-0',
+          )}
+          href={url || '#!'}
+          onClick={handleItemClick}
+          ref={linkRef}
+          target="_blank">
+          <div className="relative h-full w-full p-4">
+            <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
+              <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
+              <p className="text-xs text-white opacity-100 sm:text-sm">{description}</p>
+            </div>
+            <ArrowTopRightOnSquareIcon className="absolute bottom-1 right-1 h-4 w-4 shrink-0 text-white sm:bottom-2 sm:right-2" />
+          </div>
+        </a> :
+        <div
+          className={classNames(
+            'absolute inset-0 h-full w-full  bg-gray-900 transition-all duration-300',
+            {'opacity-0 hover:opacity-80': !mobile},
+            showOverlay ? 'opacity-80' : 'opacity-0',
+          )}
+          onClick={handleItemClick}>
+          <div className="relative h-full w-full p-4">
+            <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
+              <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
+              <p className="text-xs text-white opacity-100 sm:text-sm">{description}</p>
+            </div>
+          </div>
         </div>
-        <ArrowTopRightOnSquareIcon className="absolute bottom-1 right-1 h-4 w-4 shrink-0 text-white sm:bottom-2 sm:right-2" />
-      </div>
-    </a>
+      }
+    </>
+
+
   );
 });
