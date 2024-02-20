@@ -46,6 +46,16 @@ export const SectionId = {
   Stats: 'stats',
   Testimonials: 'testimonials',
 } as const;
+export const SectionIdName = {
+  Hero: '顶部',
+  About: '关于',
+  Contact: '联系方式',
+  Portfolio: '参与项目',
+  Resume: '个人简历',
+  Skills: '个人技能',
+  Stats: '统计数据',
+  Testimonials: 'TA人评价',
+};
 // hero 部分
 export const heroData: Hero = {
   imageSrc: heroImage,
@@ -94,23 +104,6 @@ export const aboutData: About = {
 // 技能部分
 export const skills: SkillGroup[] = [
   {
-    name: '语言能力',
-    skills: [
-      {
-        name: '汉语',
-        level: 10,
-      },
-      {
-        name: '英语',
-        level: 2,
-      },
-      {
-        name: '其他',
-        level: 0,
-      },
-    ],
-  },
-  {
     name: '前端开发',
     skills: [
       {
@@ -123,24 +116,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Svelte',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: '后端开发',
-    skills: [
-      {
-        name: 'Node',
-        level: 6,
-      },
-      {
-        name: 'Nest',
-        level: 6,
-      },
-      {
-        name: 'Rust',
-        level: 1,
+        level: 4,
       },
     ],
   },
@@ -158,6 +134,40 @@ export const skills: SkillGroup[] = [
       {
         name: 'React Native',
         level: 1,
+      },
+    ],
+  },
+  {
+    name: '后端开发',
+    skills: [
+      {
+        name: 'Node',
+        level: 5,
+      },
+      {
+        name: 'Nest',
+        level: 5,
+      },
+      {
+        name: 'Rust',
+        level: 1,
+      },
+    ],
+  },
+  {
+    name: '语言能力',
+    skills: [
+      {
+        name: '汉语',
+        level: 10,
+      },
+      {
+        name: '英语',
+        level: 2,
+      },
+      {
+        name: '其他',
+        level: 0,
       },
     ],
   },
