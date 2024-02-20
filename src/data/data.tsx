@@ -9,22 +9,11 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -40,17 +29,13 @@ import {
   TimelineItem,
 } from './dataDef';
 
-/**
- * Page meta data
- */
-export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
-};
 
-/**
- * Section definition
- */
+// 页面元数据
+export const homePageMeta: HomepageMeta = {
+  title: '前端开发工程师-韩晓东',
+  description: "使用React Resume Template构建",
+};
+// 定义
 export const SectionId = {
   Hero: 'hero',
   About: 'about',
@@ -61,88 +46,75 @@ export const SectionId = {
   Stats: 'stats',
   Testimonials: 'testimonials',
 } as const;
-
-export type SectionId = (typeof SectionId)[keyof typeof SectionId];
-
-/**
- * Hero section
- */
+// hero 部分
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: '韩晓东',
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        我是一名位于山东青岛的<strong className="text-stone-100">前端开发工程师</strong>，
+        目前在<strong className="text-stone-100">文达通科技股份有限公司</strong>工作。
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        主要工作为构建稳定可扩展的前端脚手架，编写高可用的组件，并参与项目开发。
+      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        闲暇时间，我会研究智能家具、玩会游戏，或是探索祖国的大好河山。
       </p>
     </>
   ),
   actions: [
     {
       href: '/assets/resume.pdf',
-      text: 'Resume',
+      text: '简历',
       primary: true,
       Icon: ArrowDownTrayIcon,
     },
     {
       href: `#${SectionId.Contact}`,
-      text: 'Contact',
+      text: '联系方式',
       primary: false,
     },
   ],
 };
-
-/**
- * About section
- */
+// 个人介绍
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: '一名前端开发人员，负责组内项目工程化、组件编写工作。',
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: '位置', text: '山东 / 青岛', Icon: MapIcon},
+    {label: '年龄', text: '1997/01', Icon: CalendarIcon},
+    {label: '籍贯', text: '山东 / 青岛', Icon: FlagIcon},
+    {label: '兴趣', text: '游山玩水、智能家具、Switch', Icon: SparklesIcon},
+    {label: '本科', text: '河南理工大学', Icon: AcademicCapIcon},
+    {label: '工作', text: '文达通股份有限公司', Icon: BuildingOffice2Icon},
   ],
 };
-
-/**
- * Skills section
- */
+// 技能部分
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: '语言能力',
     skills: [
       {
-        name: 'English',
+        name: '汉语',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: '英语',
+        level: 2,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: '其他',
+        level: 0,
       },
     ],
   },
   {
-    name: 'Frontend development',
+    name: '前端开发',
     skills: [
       {
-        name: 'React',
+        name: 'Vue',
         level: 9,
       },
       {
@@ -150,224 +122,121 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
+        name: 'Svelte',
         level: 3,
       },
     ],
   },
+  {
+    name: '后端开发',
+    skills: [
+      {
+        name: 'Node',
+        level: 6,
+      },
+      {
+        name: 'Nest',
+        level: 6,
+      },
+      {
+        name: 'Rust',
+        level: 1,
+      },
+    ],
+  },
+  {
+    name: '移动端开发',
+    skills: [
+      {
+        name: '微信小程序',
+        level: 6,
+      },
+      {
+        name: 'uni-app',
+        level: 6,
+      },
+      {
+        name: 'React Native',
+        level: 1,
+      },
+    ],
+  },
 ];
-
-/**
- * Portfolio section
- */
+// 项目部分
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
+    title: '项目标题 1',
+    description: '在这里给出你的项目的简短描述。',
     url: 'https://reactresume.com',
     image: porfolioImage1,
   },
-  {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
-  },
-  {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
 ];
-
-/**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
- */
+// 教育经历 -- TODO: 标准化简历联系格式或提供 MDX
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2015/09-2019/07',
+    location: '河南理工大学',
+    title: '本科',
+    content: <p>计算机二级、计算机三级</p>,
   },
 ];
-
+// 工作经理
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
+    date: '2019/07-2021/10',
+    location: '北京中科锐景科技有限公司',
+    title: '前端开发工程师',
+    content: (<p>环保、林业部门的大屏项目及后台管理项目的前端开发。</p>),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
+    date: '2021/11-至今',
+    location: '文达通科技股份有限公司',
+    title: '前端开发工程师',
+    content: (<p>前端脚手架构建和维护、规范制定、编写高可用组件、参与项目开发。</p>),
   },
 ];
-
-/**
- * Testimonial section
- */
+// 推荐部分
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
+      name: '约翰·多伊',
+      text: '利用这个机会来推广与你合作的感觉。高价值的推荐包括来自当前或过去的同事、经理或满意的客户的推荐。',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
-};
+  ]};
 
-/**
- * Contact section
- */
-
+// 联系方式
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: '保持联系。',
+  description: '有什么问题请给我留言，也可以通过一下方式联系我。',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'ethanhan2023@foxmail.com',
+      href: 'mailto:ethanhan2023@foxmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: '中国 | 山东 | 青岛',
+      href: 'https://www.google.ca/maps/place/中国山东省青岛市/@36.136235,120.2000287,11z',
     },
     {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      type: ContactType.Twitter,
+      text: '@EthanHan',
+      href: 'https://twitter.com/ethan_han1071',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'EthanHan',
+      href: 'https://github.com/Webming19',
     },
   ],
 };
-
-/**
- * Social items
- */
+// 联系方式项目
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Webming19'},
+  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/21751650/ethan-han'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://maimai.cn/profile/detail?dstu=232422492'},
+  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/ethan_han1071'},
 ];
