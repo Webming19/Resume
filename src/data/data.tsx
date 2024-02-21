@@ -35,7 +35,10 @@ export const homePageMeta: HomepageMeta = {
   title: '前端开发工程师-韩晓东',
   description: "使用React Resume Template构建",
 };
-// 定义
+export const DevDate = {
+  baseURL: '/Resume'
+}
+// 定义路由
 export const SectionId = {
   Hero: 'hero',
   About: 'about',

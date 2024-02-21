@@ -4,7 +4,7 @@
 const nextConfig = {
   output: 'export',
   basePath: '/Resume',
-  assetPrefix: '/Resume/',
+  assetPrefix: '/Resume',
   webpack: config => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
 
