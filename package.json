@@ -5,9 +5,9 @@
   "scripts": {
     "build": "pnpm compile && pnpm next build",
     "clean": "rm -rf build-tsc .next",
-    "compile": "pnpm run -T tsc --build --verbose",
+    "compile": "pnpm exec tsc --build --verbose",
     "dev": "pnpm compile && pnpm next dev",
-    "lint": "pnpm run -T prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
+    "lint": "pnpm exec prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && pnpm exec eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
     "start": "pnpm next start",
     "sitemap": "pnpm next-sitemap",
     "export": "next export"

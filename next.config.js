@@ -1,7 +1,10 @@
 /* eslint-env node */
+const env = process.env.NODE_ENV === 'production';
 
 // https://github.com/vercel/next.js/blob/master/packages/next/next-server/server/config.ts
 const nextConfig = {
+  basePath: env ? '/Resume' : '',
+  assetPrefix: env ? '/Resume/' : '',
   webpack: config => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
 

@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  siteUrl: 'reactresume.com',
+  siteUrl: 'https://webming19.github.io/Resume/',
   exclude: ['/404*', '/500*'],
   transform: async (config, path) => {
     return {
