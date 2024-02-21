@@ -27,9 +27,6 @@ jobs:
       - name: Build Project
         run: pnpm run build
 
-      - name: Export Static Pages
-        run: pnpm run export # 确保在 package.json 中添加了 "export": "next export"
-
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
         with:

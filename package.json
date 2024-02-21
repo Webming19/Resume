@@ -9,8 +9,7 @@
     "dev": "pnpm compile && pnpm next dev",
     "lint": "pnpm exec prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && pnpm exec eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
     "start": "pnpm next start",
-    "sitemap": "pnpm next-sitemap",
-    "export": "next export"
+    "sitemap": "pnpm next-sitemap"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.16",

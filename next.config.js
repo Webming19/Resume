@@ -3,6 +3,7 @@ const env = process.env.NODE_ENV === 'production';
 
 // https://github.com/vercel/next.js/blob/master/packages/next/next-server/server/config.ts
 const nextConfig = {
+  output: 'export',
   basePath: env ? '/Resume' : '',
   assetPrefix: env ? '/Resume/' : '',
   webpack: config => {
@@ -27,15 +28,7 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: false,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },{
-        protocol: 'https',
-        hostname: 'source.unsplash.com',
-      },
-    ],
+    unoptimized: true,
   },
 };
 
