@@ -32,8 +32,8 @@ import {
 
 // 页面元数据
 export const homePageMeta: HomepageMeta = {
-  title: '前端工程师-韩晓东',
-  description: "使用React Resume Template构建",
+  title: 'EthanHan-前端工程师',
+  description: "",
 };
 export const DevDate = {
   baseURL: '/Resume'
@@ -62,7 +62,7 @@ export const SectionIdName = {
 // hero 部分
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: '韩晓东',
+  name: 'EthanHan',
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
