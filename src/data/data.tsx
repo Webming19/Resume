@@ -199,7 +199,7 @@ export const experience: TimelineItem[] = [
     date: '2019/07-2021/10',
     location: '北京中科锐景科技有限公司',
     title: '前端工程师',
-    content: (<p>环保、林业部门的大屏项目及后台管理项目的前端开发。</p>),
+    content: (<p>环保、林业部门的大屏项目及后台管理项目的前端开发，主要技术选型为Vue2。</p>),
   },
   {
     date: '2021/11-至今',
@@ -213,7 +213,7 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: '武子康-Java开发',
+      name: '武子康 Java工程师',
       text: '合作顺畅，共同推进DevOps。',
       image: '/images/testimonial/169.jpg',
     },
@@ -251,6 +251,6 @@ export const contact: ContactSection = {
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Webming19'},
   {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/21751650/ethan-han'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://maimai.cn/profile/detail?dstu=232422492'},
+  // {label: 'MaiMai', Icon: LinkedInIcon, href: 'https://maimai.cn/profile/detail?dstu=232422492'},
   {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/ethan_han1071'},
 ];
