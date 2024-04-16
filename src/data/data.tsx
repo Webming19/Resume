@@ -66,7 +66,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        我是一名位于山东青岛的<strong className="text-stone-100">前端开发工程师</strong>，
+        我是一名位于山东青岛的<strong className="text-stone-100">前端工程师</strong>，
         目前在<strong className="text-stone-100">文达通科技股份有限公司</strong>工作。
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -198,7 +198,7 @@ export const experience: TimelineItem[] = [
   {
     date: '2019/07-2021/10',
     location: '北京中科锐景科技有限公司',
-    title: '前端开发工程师',
+    title: '前端工程师',
     content: (<p>环保、林业部门的大屏项目及后台管理项目的前端开发。</p>),
   },
   {
@@ -214,7 +214,7 @@ export const testimonial: TestimonialSection = {
   testimonials: [
     {
       name: '武子康-Java开发',
-      text: '基于DevOps的合作非常愉快。',
+      text: '合作顺畅，共同推进DevOps。',
       image: '/images/testimonial/169.jpg',
     },
   ],
