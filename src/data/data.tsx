@@ -32,7 +32,7 @@ import {
 
 // 页面元数据
 export const homePageMeta: HomepageMeta = {
-  title: '高级前端工程师-韩晓东',
+  title: '前端工程师-韩晓东',
   description: "使用React Resume Template构建",
 };
 export const DevDate = {
@@ -94,14 +94,14 @@ export const heroData: Hero = {
 // 个人介绍
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: '一名高级前端工程师，负责组内项目工程化和组件编写工作。',
+  description: '前端工程师，负责组内项目工程化、组件、Hooks编写工作。',
   aboutItems: [
     {label: '位置', text: '山东 / 青岛', Icon: MapIcon},
     {label: '年龄', text: '1997/01', Icon: CalendarIcon},
     {label: '籍贯', text: '山东 / 青岛', Icon: FlagIcon},
     {label: '兴趣', text: '游山玩水、智能家具、Switch', Icon: SparklesIcon},
     {label: '本科', text: '河南理工大学', Icon: AcademicCapIcon},
-    {label: '工作', text: '文达通股份有限公司', Icon: BuildingOffice2Icon},
+    {label: '工作', text: '文达通科技股份有限公司', Icon: BuildingOffice2Icon},
   ],
 };
 // 技能部分
@@ -204,7 +204,7 @@ export const experience: TimelineItem[] = [
   {
     date: '2021/11-至今',
     location: '文达通科技股份有限公司',
-    title: '高级前端工程师',
+    title: '前端工程师',
     content: (<p>前端脚手架构建和维护、规范制定、编写高可用组件、参与项目开发。</p>),
   },
 ];
